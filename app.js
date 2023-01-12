@@ -2,6 +2,9 @@ console.log("jazda!");
 
 const one = document.querySelector(".one");
 
-one.addEventListener("click", () => {
-	one.classList.toggle("moveOne");
+one.addEventListener("mouseenter", () => {
+	one.classList.add("moveOne");
+});
+one.addEventListener("mouseleave", () => {
+	one.classList.remove("moveOne");
 });
