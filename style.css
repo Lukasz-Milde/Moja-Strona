@@ -4,12 +4,36 @@ body {
 	padding: 0;
 	height: 100vh;
 	background-color: #222;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+a {
+	place-self: center center;
+	padding: 7rem;
+	font-size: 8rem;
+	font-weight: bold;
+	text-decoration: none;
+	border: none;
+	background-image: url(./assets/DJI_0945.jpg);
+	background-size: cover;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	opacity: 0;
+}
+
+a:hover {
+	opacity: 1;
 }
 
 .img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	display: grid;
 	grid-template-columns: 20vw 20vw;
 	grid-template-rows: 20vh 20vh;
