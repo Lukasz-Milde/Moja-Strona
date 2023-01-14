@@ -6,8 +6,8 @@ body {
 	background-color: #222;
 	position: relative;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 50% 50%;
 }
 
 a {
@@ -29,8 +29,29 @@ a:hover {
 	opacity: 1;
 }
 
+.one-grid {
+	position: relative;
+}
+
+.one--move {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 300px;
+	height: auto;
+	opacity: 0.5;
+}
+
+.one--move:hover {
+	transition: 2s ease-out;
+	transform: translate(-30px, -30px);
+	opacity: 1;
+}
 .img {
 	position: absolute;
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -44,50 +65,4 @@ a:hover {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
-}
-
-.one {
-	width: 100%;
-	height: 100%;
-	grid-area: one;
-	background-image: url(/assets/DJI_0945.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	opacity: 0;
-	/* visibility: hidden; */
-}
-.two {
-	width: 100%;
-	height: 100%;
-	grid-area: two;
-	background-image: url(/assets/DJI_0945.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	opacity: 0;
-}
-.three {
-	width: 100%;
-	height: 100%;
-	grid-area: three;
-	background-image: url(/assets/DJI_0945.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	opacity: 0;
-}
-.four {
-	width: 100%;
-	height: 100%;
-	grid-area: four;
-	background-image: url(/assets/DJI_0945.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	opacity: 0;
-}
-
-.moveOne {
-	opacity: 1;
 }
