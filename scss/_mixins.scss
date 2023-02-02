@@ -1,0 +1,14 @@
+@mixin flex($direction, $gap) {
+	display: flex;
+	flex-direction: $direction;
+	gap: $gap;
+}
+
+@mixin pseudo-line($width, $margin-bottom) {
+	display: inline-block;
+	content: "";
+	width: $width;
+	height: 2px;
+	margin-bottom: $margin-bottom;
+	background-color: brown;
+}
