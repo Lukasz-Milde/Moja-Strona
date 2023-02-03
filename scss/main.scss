@@ -44,7 +44,7 @@ header {
 		list-style: none;
 		font-size: 0.8rem;
 		letter-spacing: 0.3rem;
-		color: pink;
+		color: $dirty-white;
 	}
 	.nav__link--home::before {
 		@include pseudo-line(5rem, 0.2rem);
@@ -57,22 +57,22 @@ header {
 .header__title {
 	position: absolute;
 	width: 35vw;
-	color: pink;
+	color: $dirty-white;
 	left: 10rem;
 	bottom: 12rem;
-	overflow: hidden;
+
 	span {
 		font-size: 1.8rem;
 		letter-spacing: 0.3rem;
+		color: $light-blood;
 	}
-	span::before {
+	span::after {
 		@include pseudo-line(5rem, 0.5rem);
-		margin-right: 1rem;
+		margin-left: 1rem;
 	}
 	h1 {
 		font-size: 8rem;
 		letter-spacing: 0.3rem;
-		margin-left: 7rem;
 	}
 }
 // --------------SOCIAL NAV------------------------------------
@@ -99,6 +99,65 @@ header {
 	span {
 		font-size: 1.2rem;
 		letter-spacing: 0.3rem;
-		color: pink;
+		color: $dirty-white;
+	}
+}
+
+// --------------------------------------
+// --------------ABOUT-------------------
+// --------------------------------------
+
+.about {
+	height: 100vh;
+	background-image: url(/public/assets/images/galezie.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	@include flex(row, 0);
+	justify-content: space-between;
+	align-items: center;
+}
+
+.about__container--text {
+	position: absolute;
+	left: 5rem;
+	width: 30vw;
+	padding: 2rem;
+	background-color: $dirty-white;
+	color: $blackish;
+	h2 {
+		font-size: 3rem;
+		margin-bottom: 2rem;
+	}
+	article {
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+}
+
+.about__container--pics {
+	position: absolute;
+	right: 5rem;
+	width: 40vw;
+	display: grid;
+	gap: 2rem;
+	align-items: center;
+	grid-auto-columns: 1fr 1fr;
+	grid-auto-rows: 1fr 1fr;
+	grid-template-areas:
+		"fire dj"
+		"fire mountain";
+	img {
+		object-fit: cover;
+		width: 100%;
+	}
+	.fire-pic {
+		grid-area: fire;
+	}
+	.dj-pic {
+		grid-area: dj;
+	}
+	.snow-pic {
+		grid-area: mountain;
 	}
 }

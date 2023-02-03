@@ -8,7 +8,7 @@
 	display: inline-block;
 	content: "";
 	width: $width;
-	height: 2px;
+	height: 1px;
 	margin-bottom: $margin-bottom;
-	background-color: brown;
+	background-color: hsla(0, 96%, 37%, 1);
 }
