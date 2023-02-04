@@ -118,7 +118,7 @@ header {
 	align-items: center;
 }
 
-.about__container--text {
+.about__container {
 	position: absolute;
 	left: 5rem;
 	width: 30vw;
@@ -132,6 +132,11 @@ header {
 	article {
 		font-size: 1rem;
 		line-height: 1.5rem;
+		margin-bottom: 2rem;
+	}
+	span {
+		font-size: 1.5rem;
+		line-height: 2rem;
 	}
 }
 
@@ -160,4 +165,35 @@ header {
 	.snow-pic {
 		grid-area: mountain;
 	}
+}
+
+// --------------------------------------
+// --------------PROJECTS----------------
+// --------------------------------------
+
+.projects {
+	height: 100vh;
+	background-image: url(/public/assets/images/trawa.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	@include flex(column, 2rem);
+	justify-content: center;
+	align-items: center;
+}
+
+.projects__header {
+	@include flex(column, 2rem);
+	background-color: pink;
+}
+
+.projects__main-container {
+	display: grid;
+	grid-template-columns: 25vw 25vw;
+	grid-template-rows: auto;
+	gap: 4rem;
+}
+
+.project-block {
+	@include flex(column, 2rem);
 }
