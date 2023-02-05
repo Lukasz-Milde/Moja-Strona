@@ -18,11 +18,6 @@ body {
 .devider {
 	height: 25em;
 	background-color: rgb(2, 2, 2);
-	// background-image: url("/public/assets/images/papier.jpg");
-	// background-size: cover;
-	// background-repeat: no-repeat;
-	// background-color: hsla(0, 94%, 37%, 0.8);
-	// backdrop-filter: blur(80rem);
 }
 
 // --------------------------------------
@@ -77,9 +72,13 @@ body {
 		letter-spacing: 0.3rem;
 		color: $light-blood;
 	}
-	span::after {
+	.header__title--hello::after {
 		@include pseudo-line(5rem, 0.5rem);
 		margin-left: 1rem;
+	}
+	.header__title--developer::before {
+		@include pseudo-line(4rem, 0.5rem);
+		margin-right: 1rem;
 	}
 	h1 {
 		font-size: 8rem;
@@ -278,6 +277,10 @@ body {
 			font-weight: 600;
 			color: $dirty-white;
 		}
+		&:hover,
+		&:active {
+			background-color: hsla(0, 0%, 91%, 0.2);
+		}
 	}
 }
 
@@ -299,6 +302,10 @@ body {
 		font-size: 1rem;
 		letter-spacing: 0.1rem;
 		color: white;
+	}
+	&:hover,
+	&:active {
+		background-color: hsla(0, 0%, 91%, 0.2);
 	}
 }
 
@@ -334,3 +341,62 @@ body {
 // --------------------------------------
 // --------------FOOTER------------------
 // --------------------------------------
+
+.footer-section {
+	display: grid;
+	place-items: center;
+	height: 33rem;
+}
+
+.footer__container {
+	@include flex(column, 3rem);
+	justify-content: center;
+	align-items: center;
+	.footer__top {
+		@include flex(column, 2rem);
+		justify-content: center;
+		align-items: center;
+		img {
+			width: 12rem;
+			height: 12rem;
+			padding: 1rem;
+			border-radius: 50%;
+			&:hover,
+			&:active {
+				color: $dark-red;
+				box-shadow: 0px 0px 30px $dark-red;
+			}
+		}
+		.footer__top--links {
+			@include flex(row, 1rem);
+			color: $dirty-white;
+
+			span {
+				font-size: 1.5rem;
+				letter-spacing: 0.2rem;
+				cursor: pointer;
+				margin: 0 1rem;
+				padding: 1rem;
+				&:hover,
+				&:active {
+					color: $dark-red;
+					box-shadow: 0px 0px 30px $dark-red;
+				}
+			}
+		}
+	}
+
+	.footer__bottom {
+		@include flex(column, 1rem);
+		justify-content: center;
+		align-items: center;
+		span {
+			color: $dark-red;
+			font-size: 1rem;
+		}
+		.author {
+			color: $dirty-white;
+			font-size: 1.3rem;
+		}
+	}
+}
