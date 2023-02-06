@@ -46,6 +46,7 @@ body {
 		letter-spacing: 0.3rem;
 		color: $dirty-white;
 		cursor: pointer;
+		text-shadow: 3px 3px 10px $dark-red;
 	}
 	.nav__links li:hover,
 	.nav__links li:active {
@@ -71,18 +72,22 @@ body {
 		font-size: 1.8rem;
 		letter-spacing: 0.3rem;
 		color: $light-blood;
+		text-shadow: 3px 5px 2px black;
 	}
 	.header__title--hello::after {
-		@include pseudo-line(5rem, 0.5rem);
+		@include pseudo-line(4rem, 0.5rem);
 		margin-left: 1rem;
+		background-color: $dirty-white;
 	}
 	.header__title--developer::before {
 		@include pseudo-line(4rem, 0.5rem);
 		margin-right: 1rem;
+		background-color: $dirty-white;
 	}
 	h1 {
 		font-size: 8rem;
 		letter-spacing: 0.3rem;
+		text-shadow: 1px 1px 5px $dirty-white;
 	}
 }
 // --------------SOCIAL NAV------------------------------------
@@ -90,13 +95,30 @@ body {
 .social__nav {
 	position: absolute;
 	right: 2rem;
-	bottom: 10rem;
+	bottom: 8rem;
 	ul {
-		@include flex(column, 3rem);
+		@include flex(column, 7rem);
 		list-style: none;
 	}
 	ul li {
-		color: pink;
+		width: 3rem;
+		height: 3rem;
+		img {
+			width: 100%;
+			filter: invert(100%);
+			-webkit-filter: invert(100%);
+		}
+		&::after {
+			@include pseudo-line(1px, 0);
+			height: 5rem;
+			margin-left: 50%;
+			background-color: $dirty-white;
+		}
+		&:hover,
+		&:active {
+			filter: invert(50%);
+			-webkit-filter: invert(50%);
+		}
 	}
 }
 
@@ -131,6 +153,7 @@ body {
 	padding: 2rem;
 	background-color: $dirty-white;
 	color: $blackish;
+	box-shadow: 1px 1px 10px $dirty-white;
 	h2 {
 		font-size: 3rem;
 		margin-bottom: 2rem;
@@ -156,6 +179,40 @@ body {
 
 	img {
 		border-radius: 10px;
+	}
+}
+
+// --------------------------------------
+// --------------TECHNOLOGIES------------
+// --------------------------------------
+
+.technologies-section {
+	display: grid;
+	height: auto;
+	place-items: center;
+	padding: 15rem;
+}
+
+.technologies__list {
+	@include flex(row, 4rem);
+	li {
+		@include flex(column, 2rem);
+		justify-content: center;
+		align-items: center;
+		width: 7rem;
+		height: 7rem;
+		position: relative;
+		img {
+			width: 100%;
+			filter: invert(100%);
+			-webkit-filter: invert(100%);
+		}
+		span {
+			// position: absolute;
+			// top: 5rem;
+			// opacity: 0;
+			color: $dirty-white;
+		}
 	}
 }
 
@@ -316,7 +373,7 @@ body {
 	border: none;
 	border-radius: 5px;
 	background-color: $dark-red;
-	color: $white;
+	color: $blackish;
 	font-weight: 600;
 	letter-spacing: 0.1rem;
 
