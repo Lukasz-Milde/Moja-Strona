@@ -295,6 +295,7 @@ body {
 		width: 7rem;
 		height: 7rem;
 		position: relative;
+		transition: all 0.4s ease-in-out;
 		img {
 			width: 100%;
 			filter: invert(100%);
@@ -303,6 +304,9 @@ body {
 		span {
 			font-size: 0.7rem;
 			color: $dirty-white;
+		}
+		&:hover {
+			transform: scale(1.8);
 		}
 	}
 }
