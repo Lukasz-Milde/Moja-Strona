@@ -55,9 +55,7 @@ body {
 	.nav__links {
 		@include flex(row, 5rem);
 		list-style: none;
-		font-size: 0.8rem;
-		letter-spacing: 0.3rem;
-		color: $dirty-white;
+
 		cursor: pointer;
 		text-shadow: 3px 3px 10px $dark-red;
 		&::before {
@@ -67,7 +65,11 @@ body {
 			animation: header-nav-line 2.5s ease-in-out 0s 1 normal;
 		}
 	}
-	.nav__links li {
+	.nav__links li a {
+		font-size: 0.8rem;
+		text-decoration: none;
+		letter-spacing: 0.3rem;
+		color: $dirty-white;
 		transition: color 0.4s ease-in-out;
 		&:hover,
 		&:active {
@@ -597,7 +599,6 @@ body {
 		align-items: center;
 		button {
 			background-color: transparent;
-			color: $dirty-white;
 			cursor: pointer;
 			&::before {
 				@include pseudo-line(2rem, 0);
@@ -614,6 +615,10 @@ body {
 			&:hover::after,
 			&:focus::after {
 				width: 5rem;
+			}
+			a {
+				text-decoration: none;
+				color: $dirty-white;
 			}
 		}
 		span {
