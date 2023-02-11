@@ -23,5 +23,5 @@
 
 @mixin blur {
 	background: hsl(0 0% 100% / 0.1);
-	backdrop-filter: blur(5rem);
+	backdrop-filter: blur(1rem);
 }
