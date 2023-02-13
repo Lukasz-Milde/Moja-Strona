@@ -91,12 +91,18 @@ body {
 	}
 }
 
+// --------------HERO CONTAINER----------------------------
+
+.hero-container {
+	@include flex(column, 3rem);
+	justify-content: center;
+	position: absolute;
+	left: 5rem;
+}
+
 // --------------LOGO SPIN-----------------------------------
 
 .header__logo--spin {
-	position: absolute;
-	top: 3rem;
-	left: 5vw;
 	width: 17rem;
 	height: 17rem;
 	border-radius: 50%;
@@ -116,11 +122,8 @@ body {
 // --------------HEADER TITLE--------------------------------
 
 .header__title-section {
-	position: absolute;
 	width: 35vw;
 	color: $dirty-white;
-	left: 10rem;
-	bottom: 12rem;
 	span {
 		font-size: 1.8rem;
 		letter-spacing: 0.3rem;
@@ -241,14 +244,13 @@ body {
 
 .about-section {
 	@include section-styles("/public/assets/images/galezie.jpg");
-	@include flex(row, 20rem);
-	justify-content: space-between;
+	@include flex(row, 0);
 	align-items: center;
 }
 
 .about__container {
 	position: absolute;
-	left: 5rem;
+	right: 5rem;
 	width: 30vw;
 	padding: 2rem;
 	background-color: $dirty-white;
