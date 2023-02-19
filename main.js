@@ -149,3 +149,13 @@ function someCheck(item) {
 }
 
 console.log(someFn(someArray, someCheck));
+
+// ##################################################
+// ##################################################
+// ##################################################
+
+function getMyAge(input) {}
+
+const result1 = getMyAge(new Date(1990, 1, 1));
+const result2 = getMyAge("1990");
+const result3 = getMyAge(1990);
