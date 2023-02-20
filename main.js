@@ -154,8 +154,18 @@ console.log(someFn(someArray, someCheck));
 // ##################################################
 // ##################################################
 
-function getMyAge(input) {}
+function getMyAge(input) {
+	if (typeof input === "object") {
+		return new Date().getFullYear() - input.getFullYear();
+	}
+	if (typeof input === "string") {
+		return new Date().getFullYear() - +input;
+	}
+	if (typeof input === "number") {
+		return new Date().getFullYear() - input;
+	}
+}
 
-const result1 = getMyAge(new Date(1990, 1, 1));
-const result2 = getMyAge("1990");
-const result3 = getMyAge(1990);
+console.log(getMyAge(new Date(1988, 1, 1)));
+console.log(getMyAge("1990"));
+console.log(getMyAge(1992));
