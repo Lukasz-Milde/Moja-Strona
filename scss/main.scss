@@ -325,7 +325,7 @@ body {
 // --------------------------------------
 
 .projects-section {
-	@include section-styles("/public/assets/images/trawa.jpg");
+	@include section-styles("/public/assets/images/water.jpg");
 	@include flex(column, 2rem);
 	justify-content: center;
 	align-items: center;
@@ -409,7 +409,7 @@ body {
 			transition: transform 0.2s ease-in-out;
 			&:hover,
 			&:focus {
-				transform: scale(1.2);
+				transform: scale(1.1);
 			}
 			&::after {
 				@include pseudo-line(2rem, 0);
