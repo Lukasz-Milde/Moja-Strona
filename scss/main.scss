@@ -315,7 +315,7 @@ body {
 			color: $dirty-white;
 		}
 		&:hover {
-			transform: scale(1.8);
+			transform: scale(1.5);
 		}
 	}
 }
@@ -410,11 +410,6 @@ body {
 			&:hover,
 			&:focus {
 				transform: scale(1.1);
-			}
-			&::after {
-				@include pseudo-line(2rem, 0);
-				margin-left: 0.1rem;
-				background-color: $dirty-white;
 			}
 		}
 	}
@@ -603,6 +598,7 @@ body {
 		justify-content: center;
 		align-items: center;
 		button {
+			border: none;
 			background-color: transparent;
 			cursor: pointer;
 			&::before {
