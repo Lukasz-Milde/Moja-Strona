@@ -1,0 +1,81 @@
+@use "../abstracts" as *;
+// --------------------------------------
+// --------------ABOUT-------------------
+// --------------------------------------
+.about-section {
+	@include section-styles("../public/assets/images/galezie.jpg");
+	@include flex(row, 0);
+	align-items: center;
+}
+
+.about__container {
+	position: absolute;
+	right: 5rem;
+	width: 30vw;
+	padding: 2rem;
+	background-color: $dirty-white;
+	color: $blackish;
+	box-shadow: 1px 1px 10px $dirty-white;
+	h2 {
+		font-size: 3rem;
+		margin-bottom: 2rem;
+	}
+	article {
+		font-size: 1rem;
+		line-height: 1.5rem;
+		margin-bottom: 2rem;
+	}
+	span {
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+}
+
+// --------------ABOUT IMAGE------------------------------------
+
+.about__container--image {
+	position: absolute;
+	right: 5rem;
+	border-radius: 10px;
+	box-shadow: 40px 20px 50px rgba(0, 0, 0, 0.5);
+
+	img {
+		border-radius: 10px;
+	}
+}
+
+// --------------------------------------
+// --------------TECHNOLOGIES------------
+// --------------------------------------
+
+.technologies-section {
+	display: grid;
+	height: auto;
+	place-items: center;
+	padding: 15rem;
+}
+
+.technologies__list {
+	@include flex(row, 4rem);
+	li {
+		@include flex(column, 2rem);
+		justify-content: center;
+		align-items: center;
+		width: 7rem;
+		height: 7rem;
+		position: relative;
+		transition: all 0.4s ease-in-out;
+		img {
+			width: 100%;
+			filter: invert(100%);
+			-webkit-filter: invert(100%);
+		}
+		span {
+			font-size: 0.7rem;
+			color: $dirty-white;
+		}
+		&:hover {
+			transform: scale(1.5);
+		}
+	}
+}

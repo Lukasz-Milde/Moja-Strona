@@ -1,0 +1,97 @@
+@use "../abstracts" as *;
+// --------------------------------------
+// --------------FOOTER------------------
+// --------------------------------------
+
+.footer-section {
+	display: grid;
+	place-items: center;
+	height: 33rem;
+}
+
+.footer__container {
+	@include flex(column, 3rem);
+	justify-content: center;
+	align-items: center;
+	.footer__top {
+		@include flex(column, 2rem);
+		justify-content: center;
+		align-items: center;
+		img {
+			width: 12rem;
+			height: 12rem;
+			padding: 1rem;
+			border-radius: 50%;
+			&:hover,
+			&:active {
+				color: $dark-red;
+				box-shadow: 0px 0px 30px $dark-red;
+			}
+		}
+		.footer__top--links {
+			@include flex(row, 1rem);
+			color: $dirty-white;
+
+			span {
+				font-size: 1.5rem;
+				letter-spacing: 0.2rem;
+				cursor: pointer;
+				margin: 0 1rem;
+				padding: 1rem;
+				&:hover,
+				&:active {
+					color: $dark-red;
+					box-shadow: 0px 0px 30px $dark-red;
+				}
+			}
+		}
+	}
+
+	// --------------FOOTER BOTTOM---------------------------------
+
+	.footer__bottom {
+		@include flex(column, 1rem);
+		justify-content: center;
+		align-items: center;
+		button {
+			border: none;
+			background-color: transparent;
+			cursor: pointer;
+			&::before {
+				@include pseudo-line(2rem, 0);
+				margin-right: 0.5rem;
+				transition: all 0.9s ease-in-out;
+			}
+			&::after {
+				@include pseudo-line(2rem, 0);
+				margin-left: 0.5rem;
+				transition: all 0.3s ease-in-out;
+			}
+			&:hover::before,
+			&:focus::before,
+			&:hover::after,
+			&:focus::after {
+				width: 5rem;
+			}
+			a {
+				text-decoration: none;
+				color: $dirty-white;
+			}
+		}
+		span {
+			color: $dark-red;
+			font-size: 1rem;
+		}
+		.author {
+			color: $dirty-white;
+			font-size: 1.3rem;
+		}
+		.credits {
+			font-size: 0.7rem;
+			a {
+				text-decoration: none;
+				color: $dirty-white;
+			}
+		}
+	}
+}
