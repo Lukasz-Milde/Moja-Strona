@@ -1,7 +1,8 @@
-@use "../abstracts" as *;
 // --------------------------------------
 // --------------PROJECTS----------------
 // --------------------------------------
+
+@use "../abstracts" as *;
 
 .projects-section {
 	@include section-styles("../public/assets/images/water.jpg");

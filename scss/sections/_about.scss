@@ -1,7 +1,9 @@
-@use "../abstracts" as *;
 // --------------------------------------
 // --------------ABOUT-------------------
 // --------------------------------------
+
+@use "../abstracts" as *;
+
 .about-section {
 	@include section-styles("../public/assets/images/galezie.jpg");
 	@include flex(row, 0);
@@ -41,41 +43,5 @@
 
 	img {
 		border-radius: 10px;
-	}
-}
-
-// --------------------------------------
-// --------------TECHNOLOGIES------------
-// --------------------------------------
-
-.technologies-section {
-	display: grid;
-	height: auto;
-	place-items: center;
-	padding: 15rem;
-}
-
-.technologies__list {
-	@include flex(row, 4rem);
-	li {
-		@include flex(column, 2rem);
-		justify-content: center;
-		align-items: center;
-		width: 7rem;
-		height: 7rem;
-		position: relative;
-		transition: all 0.4s ease-in-out;
-		img {
-			width: 100%;
-			filter: invert(100%);
-			-webkit-filter: invert(100%);
-		}
-		span {
-			font-size: 0.7rem;
-			color: $dirty-white;
-		}
-		&:hover {
-			transform: scale(1.5);
-		}
 	}
 }

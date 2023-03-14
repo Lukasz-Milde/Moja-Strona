@@ -1,7 +1,9 @@
-@use "../abstracts" as *;
 // --------------------------------------
 // --------------HEADER------------------
 // --------------------------------------
+
+@use "../abstracts" as *;
+
 .header-section {
 	@include section-styles("../public/assets/images/piasek.jpg");
 }
