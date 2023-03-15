@@ -12,7 +12,9 @@
 }
 
 .technologies__list {
-	@include flex(row, 4rem);
+	display: grid;
+	gap: 4rem;
+	grid-template-columns: repeat(8, 7rem);
 	li {
 		@include flex(column, 2rem);
 		justify-content: center;
@@ -32,6 +34,29 @@
 		}
 		&:hover {
 			transform: scale(1.5);
+		}
+	}
+}
+
+@media (max-width: 1500px) {
+	.technologies__list {
+		column-gap: 6.5rem;
+		row-gap: 11rem;
+		grid-template-columns: repeat(4, 7rem);
+	}
+}
+
+@media (max-width: 900px) {
+	.technologies-section {
+		padding: 7rem 3rem;
+	}
+	.technologies__list {
+		.li {
+			width: 5rem;
+			height: 5rem;
+			img {
+				width: 100%;
+			}
 		}
 	}
 }
