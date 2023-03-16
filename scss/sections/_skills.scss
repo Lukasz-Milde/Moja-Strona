@@ -39,6 +39,9 @@
 }
 
 @media (max-width: 1500px) {
+	.technologies-section {
+		padding: 8rem 3rem;
+	}
 	.technologies__list {
 		column-gap: 6.5rem;
 		row-gap: 11rem;

@@ -94,3 +94,40 @@
 		}
 	}
 }
+
+@media (max-width: 1450px) {
+	.projects__main-container {
+		column-gap: 5rem;
+	}
+}
+
+@media (max-width: 1300px) {
+	.projects__header {
+		padding: 1rem 2rem;
+		gap: 0.5rem;
+		h2 {
+			font-size: 1.5rem;
+			letter-spacing: 0.3rem;
+		}
+		p {
+			width: 40vw;
+			font-size: 0.8rem;
+			letter-spacing: 0.1rem;
+		}
+	}
+
+	.projects__main-container {
+		display: grid;
+		grid-template-columns: 30rem;
+		row-gap: 2rem;
+		padding: 2rem;
+	}
+}
+
+@media (max-width: 900px) {
+	.projects__header {
+		p {
+			width: 50vw;
+		}
+	}
+}
