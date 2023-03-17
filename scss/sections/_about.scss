@@ -6,21 +6,21 @@
 
 .about-section {
 	@include section-styles("../public/assets/images/galezie.jpg");
-	height: 100vh;
 	@include flex(row, 0);
 	align-items: center;
+	padding: 2rem 0;
 }
 
 .about__container {
 	position: absolute;
 	right: 5rem;
-	width: 36rem;
+	width: max(36rem, 43rem);
 	padding: 2rem;
 	background-color: $dirty-white;
 	color: $blackish;
 	box-shadow: 1px 1px 10px $dirty-white;
 	h2 {
-		font-size: 3rem;
+		font-size: 2rem;
 		margin-bottom: 2rem;
 	}
 	article {
@@ -34,6 +34,9 @@
 	}
 }
 
+// ===================MEDIA QUERIES=================
+// =================================================
+
 @media (max-width: 1400px) {
 	.about-section {
 		justify-content: center;
@@ -41,5 +44,15 @@
 
 	.about__container {
 		position: static;
+	}
+}
+
+@media (max-width: 900px) {
+	.about-section {
+		height: 120vh;
+	}
+
+	.about__container {
+		width: 36rem;
 	}
 }

@@ -15,6 +15,7 @@
 	display: grid;
 	gap: 4rem;
 	grid-template-columns: repeat(8, 7rem);
+	justify-items: center;
 	li {
 		@include flex(column, 2rem);
 		justify-content: center;
@@ -38,6 +39,9 @@
 	}
 }
 
+// ===================MEDIA QUERIES=================
+// =================================================
+
 @media (max-width: 1500px) {
 	.technologies-section {
 		padding: 8rem 3rem;
@@ -54,11 +58,26 @@
 		padding: 7rem 3rem;
 	}
 	.technologies__list {
+		grid-template-columns: repeat(4, 3rem);
 		.li {
-			width: 5rem;
-			height: 5rem;
+			width: 3rem;
+			height: 3rem;
 			img {
-				width: 100%;
+				width: 50%;
+			}
+		}
+	}
+}
+
+@media (max-width: 650px) {
+	.technologies__list {
+		grid-template-columns: repeat(2, 7rem);
+		row-gap: 7rem;
+		.li {
+			width: 3rem;
+			height: 3rem;
+			img {
+				width: 50%;
 			}
 		}
 	}
