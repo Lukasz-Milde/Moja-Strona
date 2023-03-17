@@ -104,8 +104,10 @@
 	.footer__container {
 		.footer__top {
 			.footer__top--links {
+				gap: 0.3rem;
 				span {
 					font-size: 1rem;
+					padding: 0.5rem;
 				}
 			}
 		}
