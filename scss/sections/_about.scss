@@ -14,7 +14,7 @@
 .about__container {
 	position: absolute;
 	right: 5rem;
-	width: max(36rem, 43rem);
+	width: min(39rem, 43rem);
 	padding: 2rem;
 	background-color: $dirty-white;
 	color: $blackish;
@@ -54,5 +54,32 @@
 
 	.about__container {
 		width: 36rem;
+		span {
+			font-size: 1.1;
+		}
+	}
+}
+@media (max-width: 650px) {
+	.about-section {
+		min-height: 140vh;
+		padding: 2rem;
+	}
+
+	.about__container {
+		max-width: 30rem;
+		text-align: center;
+		h2 {
+			font-size: 1.5rem;
+			margin-bottom: 2rem;
+		}
+		article {
+			font-size: 0.8rem;
+			line-height: 1.5rem;
+			margin-bottom: 2rem;
+		}
+		span {
+			font-size: 1.2rem;
+			line-height: 2rem;
+		}
 	}
 }
