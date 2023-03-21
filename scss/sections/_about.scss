@@ -37,6 +37,12 @@
 // ===================MEDIA QUERIES=================
 // =================================================
 
+@media (max-height: 800px) {
+	.about-section {
+		height: 120vh;
+	}
+}
+
 @media (max-width: 1400px) {
 	.about-section {
 		justify-content: center;

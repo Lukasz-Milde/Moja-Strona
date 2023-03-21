@@ -185,6 +185,12 @@
 // ===================MEDIA QUERIES=================
 // =================================================
 
+@media (max-height: 800px) {
+	.header__logo--spin {
+		top: 3rem;
+	}
+}
+
 @media (max-width: 800px) {
 	.nav-section {
 		display: none;
