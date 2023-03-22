@@ -181,3 +181,9 @@
 		}
 	}
 }
+
+@media (max-height: 800px) {
+	.projects-section {
+		min-height: 130vh;
+	}
+}
