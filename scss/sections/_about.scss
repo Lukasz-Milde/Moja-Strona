@@ -67,7 +67,7 @@
 }
 @media (max-width: 650px) {
 	.about-section {
-		min-height: 140vh;
+		min-height: 130vh;
 		padding: 2rem;
 	}
 
@@ -87,5 +87,17 @@
 			font-size: 1.2rem;
 			line-height: 2rem;
 		}
+	}
+}
+
+@media (max-width: 450px) {
+	.about-section {
+		height: 160vh;
+	}
+}
+
+@media (max-width: 400px) {
+	.about-section {
+		height: 185vh;
 	}
 }

@@ -114,3 +114,14 @@
 		}
 	}
 }
+
+@media (max-width: 500px) {
+	.footer__container {
+		.footer__top {
+			.footer__top--links {
+				@include flex(column, 1rem);
+				text-align: center;
+			}
+		}
+	}
+}

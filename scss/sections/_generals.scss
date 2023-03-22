@@ -18,6 +18,18 @@ body {
 }
 
 .devider {
-	height: 25em;
+	height: 15rem;
 	background-color: rgb(2, 2, 2);
+}
+
+@media (max-width: 750px) {
+	.devider {
+		height: 10rem;
+	}
+}
+
+@media (max-width: 500px) {
+	.devider {
+		height: 7rem;
+	}
 }
