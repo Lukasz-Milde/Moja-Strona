@@ -75,8 +75,9 @@
 }
 
 .project-block__text {
-	@include flex(column, 0.8rem);
+	@include flex(column, 0.5rem);
 	justify-content: space-between;
+	width: 50rem;
 	h3 {
 		font-size: 1rem;
 	}
