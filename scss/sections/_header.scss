@@ -78,13 +78,16 @@
 	height: 17rem;
 	border-radius: 50%;
 	img {
+		// filter: invert(100%);
+		// -webkit-filter: invert(100%);
+		color: white;
 		width: 100%;
 		padding: 1.5rem;
 		border-radius: 50%;
-		transition: all 3s ease-in-out;
+		transition: all 10s ease-in-out;
 		&:hover,
 		&:focus {
-			transform: rotate(280080deg);
+			transform: rotate(28080deg);
 			box-shadow: 0px 0px 150px $dark-red;
 		}
 	}
