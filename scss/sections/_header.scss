@@ -78,13 +78,11 @@
 	height: 17rem;
 	border-radius: 50%;
 	img {
-		// filter: invert(100%);
-		// -webkit-filter: invert(100%);
 		color: white;
 		width: 100%;
 		padding: 1.5rem;
 		border-radius: 50%;
-		transition: all 10s ease-in-out;
+		transition: all 10s ease-out;
 		&:hover,
 		&:focus {
 			transform: rotate(28080deg);
