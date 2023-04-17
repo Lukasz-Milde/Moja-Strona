@@ -1,5 +1,5 @@
 const form = document.querySelector(".form");
-const nameInput = document.querySelector("#name");
+const nameInput = document.getElementById("name");
 const emailInput = document.querySelector("#email");
 const subjectInput = document.querySelector("#subject");
 const messageInput = document.querySelector("#message");
@@ -13,31 +13,31 @@ form.addEventListener("submit", (event) => {
 	const messageValue = messageInput.value.trim();
 
 	if (nameValue === "") {
-		alert("Please enter your name.");
+		nameInput.value = "Please enter your name";
 		nameInput.focus();
 		return;
 	}
 
 	if (emailValue === "") {
-		alert("Please enter your email address.");
+		emailInput.value = "Please enter your email address";
 		emailInput.focus();
 		return;
 	}
 
 	if (!isValidEmail(emailValue)) {
-		alert("Please enter a valid email address.");
+		emailInput.value = "Please enter a valid email address";
 		emailInput.focus();
 		return;
 	}
 
 	if (subjectValue === "") {
-		alert("Please enter a subject.");
+		subjectInput.value = "Please enter a subject";
 		subjectInput.focus();
 		return;
 	}
 
 	if (messageValue === "") {
-		alert("Please enter a message.");
+		messageInput.value = "Please enter a message";
 		messageInput.focus();
 		return;
 	}
