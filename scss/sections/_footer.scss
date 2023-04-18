@@ -31,10 +31,11 @@
 			}
 		}
 		.footer__top--links {
-			@include flex(row, 1rem);
+			@include flex(column, 1rem);
 			color: $dirty-white;
 
 			span {
+				align-self: center;
 				font-size: 1.5rem;
 				letter-spacing: 0.2rem;
 				cursor: pointer;
